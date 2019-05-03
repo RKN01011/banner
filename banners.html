@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/banners.css" rel="stylesheet">
+    <title>Banners</title>
+</head>
+<body>
+    <section>
+        <div class="banner b1">
+                <a href="https://bandaumnikov.ru/" class="img"><img src="./img/b1foto.png"></a>
+            <div class="coreText">
+                <div class="textTop">
+                <h4>Предзаказ тетради<br />
+                «Кубометрия 3D»‎</h4>
+                <p>Акция заканчивается 6 мая. Через:</p>
+                </div>
+                <div id="timer">
+                    <div class="tBlock dash"></div>
+                    <div class="tBlock dash"></div>
+                    <div class="tBlock dash"></div>
+                    <div class="tBlock tBlockText">часов</div>
+                    <div class="tBlock tBlockText">минут</div>
+                    <div class="tBlock tBlockText">секунд</div>
+                </div>
+                <div class="buttonDiv">
+                    <div class="price">
+                        <div class="priceTop">9 999 ₽</div>
+                        <div class="priceBottom">
+                            <i></i>
+                            9 999 ₽
+                        </div>
+                    </div>
+                    <div class="button">ПОДРОБНЕЕ</div>
+                </div>
+            </div>
+        </div>
+        <a  href="https://bandaumnikov.ru/" class="banner b2">
+            <img src="./img/ban2fonDop.jpg" alt="Текст призывающий к дейсвию!">
+        </a>
+    </section>
+    <script>
+        let time = {
+            divTime: document.querySelectorAll(".dash"),
+            timers: [],
+            setTime() {
+                this.timers[0] = parseInt((new Date("05, 06, 2019, 00:00").getTime() - new Date().getTime()) / 1000);
+
+                if ( this.timers[0] < 10 )
+                this.divTime[0].innerText = "0" + parseInt(this.timers[0] / 3600);
+                else this.divTime[0].innerText = parseInt(this.timers[0] / 3600);
+                if ( 60 - new Date().getMinutes() < 10 )
+                this.divTime[1].innerText = "0" + (60 - new Date().getMinutes());
+                else this.divTime[1].innerText = 60 - new Date().getMinutes();
+                if ( 60 - new Date().getSeconds() < 10 )
+                this.divTime[2].innerText = "0" + (60 - new Date().getSeconds());
+                else this.divTime[2].innerText = 60 - new Date().getSeconds();
+            } 
+        }
+        let timeGet = time.setTime.bind(time);
+        window.onload = timeGet();
+        setInterval(timeGet, 1000)
+    </script>
+</body>
+</html>
