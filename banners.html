@@ -15,7 +15,7 @@
                 <div class="textTop">
                 <h4>Предзаказ тетради<br />
                 «Кубометрия 3D»‎</h4>
-                <p>Акция заканчивается 6 мая. Через:</p>
+                <p>Акция заканчивается 8 мая. Через:</p>
                 </div>
                 <div id="timer">
                     <div class="tBlock dash"></div>
@@ -46,7 +46,7 @@
             divTime: document.querySelectorAll(".dash"),
             timers: [],
             setTime() {
-                this.timers[0] = parseInt((new Date("05, 06, 2019, 00:00").getTime() - new Date().getTime()) / 1000);
+                this.timers[0] = parseInt((new Date("05, 08, 2019, 00:00").getTime() - new Date().getTime()) / 1000);
 
                 if ( this.timers[0] < 10 )
                 this.divTime[0].innerText = "0" + parseInt(this.timers[0] / 3600);
