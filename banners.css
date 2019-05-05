@@ -99,7 +99,7 @@ section {
     margin: 3px;
 }
 .dash {
-    height: 6vh;
+    min-height: 4vh;
     background-color: #fff;
     border-radius: 5px;
     display: flex;
