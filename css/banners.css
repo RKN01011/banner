@@ -45,7 +45,7 @@ section {
     }
     .b2 > img {
         width: 100%;
-        height: 35vh;
+        max-height: 20vh;
     }
 }
 .banner {
@@ -72,7 +72,7 @@ section {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    max-width: 285px;
+    max-width: 280px;
 }
 .coreText > div {
     display: flex;
@@ -94,18 +94,18 @@ section {
 }
 .tBlock {
     width: 30%;
-    height: 5vh;
+    height: 3vh;
     text-align: center;
     margin: 3px;
 }
 .dash {
-    height: 8vh;
+    min-height: 4vh;
     background-color: #fff;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4vh;
+    font-size: 3vh;
     letter-spacing: 8px;
     position: relative;
 }
@@ -149,7 +149,6 @@ section {
 }
 .button {
     background-color: #ff0072;
-    border: 1px solid transparent;
     color: #fff;
     display: flex;
     justify-content: center;
